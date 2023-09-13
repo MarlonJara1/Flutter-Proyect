@@ -93,9 +93,9 @@ class _PlatoPState extends State<PlatoP> {
                                   context: context,
                                   builder: (BuildContext context) {
                                     return AlertDialog(
-                                      title: const Text('Eliminar visitante'),
+                                      title: const Text('Eliminar plato'),
                                       content: const Text(
-                                          '¿Está seguro que desea eliminar este visitante?'),
+                                          '¿Está seguro que desea eliminar este plato?'),
                                       actions: [
                                         TextButton(
                                           onPressed: () {
