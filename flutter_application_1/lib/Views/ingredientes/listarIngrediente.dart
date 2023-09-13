@@ -35,7 +35,7 @@ class _IngredientePState extends State<IngredienteP> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Lista de Ingredientes'),
-        backgroundColor: Colors.black, // Cambia el color del AppBar a negro
+        backgroundColor: Colors.black, 
       ),
       body: FutureBuilder<List<Map<String, dynamic>>>(
         future: obtenerIngrediente,
@@ -57,8 +57,8 @@ class _IngredientePState extends State<IngredienteP> {
                 return Column(
                   children: <Widget>[
                     Card(
-                      elevation: 3, // Añade sombra a la tarjeta
-                      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16), // Margen
+                      elevation: 3, 
+                      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                       child: ListTile(
                         title: Text(
                           ingredientes[index]['nombreIngrediente'],
@@ -83,19 +83,19 @@ class _IngredientePState extends State<IngredienteP> {
                                 );
                               },
                               icon: Icon(Icons.edit),
-                              color: const Color.fromARGB(255, 100, 100, 100), // Cambia el color del ícono de edición
+                              color: const Color.fromARGB(255, 100, 100, 100), 
                             ),
                             IconButton(
                               icon: Icon(Icons.delete),
-                              color: Color.fromARGB(255, 241, 216, 24), // Cambia el color del ícono de eliminación
+                              color: Color.fromARGB(255, 241, 216, 24), 
                               onPressed: () {
                                 showDialog(
                                   context: context,
                                   builder: (BuildContext context) {
                                     return AlertDialog(
-                                      title: const Text('Eliminar visitante'),
+                                      title: const Text('Eliminar ingrediente'),
                                       content: const Text(
-                                          '¿Está seguro que desea eliminar este visitante?'),
+                                          '¿Está seguro que desea eliminar este ingrediente?'),
                                       actions: [
                                         TextButton(
                                           onPressed: () {
@@ -145,7 +145,7 @@ class _IngredientePState extends State<IngredienteP> {
           );
         },
         child: const Icon(Icons.add),
-        backgroundColor: Colors.black, // Cambia el color del botón flotante
+        backgroundColor: Colors.black, 
       ),
     );
   }
